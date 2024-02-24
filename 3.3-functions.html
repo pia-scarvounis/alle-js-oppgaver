@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="calc-img" src="/assets/calculator.png">
+    <script>
+        // sett inn bilde av en kalk. lag en variabel m et hemmelig tall. Når bruker trykker på kalk får han spm om tallet er større mindre el om han har gjettet riktig. 
+
+        const secretNumber = 80;
+        const calcImg = document.getElementById("calc-img"); 
+
+        function guessNumber() {
+const userGuess = prompt("gjett det hemmelige tallet");
+if (userGuess == secretNumber) alert("Du har gjettet riktig");
+ if (userGuess > secretNumber) alert("Nummeret du har gjettet er for høyt");
+ if (userGuess < secretNumber) alert("Nummeret du gjettet er for lavt");
+        }
+
+        calcImg.onclick = guessNumber;
+    </script>
+</body>
+</html>

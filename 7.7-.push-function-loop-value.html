@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="user-input" placeholder="Skriv inn din grønnsak...">
+    <input type="button" id="add-btn" value="Legg til">
+    <ul id="output-ul"></ul>
+    <script>
+//LØS DENNE IGJEN. klarte ikke
+
+        // lag et array med 3 grønnsaker, list disse ut til nettsiden i en ul
+
+        // lag et input-tekstfelt og en knapp. Brukeren skal få skrive inn sin egen grønnsak. 
+
+        // Når brukeren trykker på knappen skal grønnsaken legges inn i det eksisterende arrayet, og listes ut på nettsiden. Skal bruke to funksjoner her. En som har ansvar for å vise grønnsakene, og en som har ansvar for å legge til ny grønnsak. 
+
+    
+  
+        const vegetableArray = ["potet", "paprika", "tomat"]
+        const userInput = document.querySelector("#user-input");
+        const addBtn = document.querySelector("#add-btn");
+        const outputUl = document.querySelector("#output-ul");
+
+        addBtn.addEventListener("click", addVegetable);
+
+        function addVegetable() {
+            const userInputValue = userInput.value;
+
+            vegetableArray.push(userInputValue);
+            showVegetable();
+
+        }
+        function showVegetable() {
+            outputUl.innerHTML = "";
+            for (let i = 0; i < vegetableArray.length; i++) {
+                const liElement = document.createElement("li");
+                liElement.innerHTML += vegetableArray[i];
+                outputUl.append(liElement);
+            }
+        }
+
+        showVegetable();
+
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

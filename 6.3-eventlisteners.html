@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> // lag et program med fire knapper som representerer piltaster. Hver pil skal bli grønn når brukeren taster på en knapp på tastaturet. 
+    
+// Oppretter knappene
+const downBtn = document.createElement("button");
+downBtn.innerText = "v";
+
+const leftBtn = document.createElement("button");
+leftBtn.innerText = "<";
+
+const upBtn = document.createElement("button");
+upBtn.innerText = "^";
+
+const rightBtn = document.createElement("button");
+rightBtn.innerText = ">";
+
+// Legger knappene til i dokumentet
+document.body.appendChild(upBtn);
+document.body.appendChild(leftBtn);
+document.body.appendChild(rightBtn);
+document.body.appendChild(downBtn);
+
+// Legger til en event listener på document for keydown
+document.addEventListener("keydown", function(e) {
+    // Nullstiller fargene først
+    [upBtn, downBtn, leftBtn, rightBtn].forEach(btn => btn.style.backgroundColor = "");
+
+    // Sjekker hvilken tast som ble trykket og endrer bakgrunnsfarge
+    switch(e.code) {
+        case "ArrowUp":
+            upBtn.style.backgroundColor = "green";
+            break;
+        case "ArrowDown":
+            downBtn.style.backgroundColor = "green";
+            break;
+        case "ArrowLeft":
+            leftBtn.style.backgroundColor = "green";
+            break;
+        case "ArrowRight":
+            rightBtn.style.backgroundColor = "green";
+            break;
+    }
+});
+    </script>
+</body>
+</html>

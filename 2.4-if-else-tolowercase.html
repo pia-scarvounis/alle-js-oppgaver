@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // du skal opprette et passord. legg passordet i en variabel
+
+        // A) lag en prompt hvor du spør brukeren om å skrive inn passordet. 
+        // B) Lag en if/else statement. Om brukeren taster inn riktig passord, skriv ut en alert hvor det står velkommen. Hvis feil: skriv inn en alert der det står: ops, feil passord. 
+        // C) Brukeren skal kunne skrive med både store og små bokstaver for å få godkjent passordet
+
+        const correctPassword = "eplekake";
+        const userTypeinPassword = prompt("Skriv inn passord");
+
+        if (userTypeinPassword.toLowerCase() === correctPassword.toLowerCase()) {
+            alert("Velkommen! Du har skrevet riktig passord!");
+        } else { (userTypeinPassword != correctPassword); 
+            alert("Du har skrevet feil passord. Prøv igjen"); 
+           }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+     
+     // Vi skal nå mappe gjennom arrayet og finne year og genre. Skriv dette ut i console.loggen
+
+     const movieArray = [
+        {
+          name: "Up",
+          genre: "Animert komedie-drama",
+          year: 2009,
+        },
+        {
+          name: "Titanic",
+          genre: "romantikk-eventyr",
+          year: 1997,
+        },
+        {
+          name: "8 Mile",
+          genre: "drama",
+          year: 2002,
+        },
+        {
+          name: "Barbie",
+          genre: "fantasi-komedie",
+          year: 2023,
+        },
+        {
+          name: "Mean Girls",
+          genre: "komedie",
+          year: 2004,
+        },
+      ];
+
+      const yearAndGenre = movieArray.map((movie) => ({year: movie.year, genre: movie.genre}));
+
+      console.log(yearAndGenre)
+  </script>
+</body>
+</html>

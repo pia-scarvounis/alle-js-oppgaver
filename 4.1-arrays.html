@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <ul id="city-list"></ul>
+</head>
+<body>
+    <script> // lag et array med 5 byer. list ut alle byene til nettleseren 
+const cityList = document.getElementById("city-list");
+    const cityArray = ["Oslo", "Athen", "London", "Ålesund", "Barcelona"];
+
+    for (let i = 0; i < cityArray.length; i++) {
+        cityList.innerHTML += `<li>${cityArray[i]}</li>`;
+    }
+    </script>
+</body>
+</html>

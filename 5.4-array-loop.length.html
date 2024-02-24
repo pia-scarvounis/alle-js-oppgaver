@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="image-counter"></p>
+    <div id="array-container"></div>
+    <script>
+      // last ned 5 bilder. lag et array som inneholder de 5 bildenavnene. skriv ut de 5 bildene ved bruk av arrayet. lag en tekst som forteller bruker hvor mange bilder som finnes i arrayet.
+
+      // hint: for, <img src=x>, innerHTML, .length
+
+      // lager et array med alle bildene
+      const imageArray = [
+        `<img src="/assets/1000.jpeg"/>`,
+        `<img src="/assets/calculator.png"/>`,
+        `<img src="/assets/puppy.jpeg"/>`,
+        `<img src="/assets/sheep.jpeg"/>`,
+        `<img src="/assets/happy-cat.webp"/>`,
+      ];
+      
+      // henter ut p og div tag i JS. 
+      const arrayContainer = document.getElementById("array-container");
+      const imageCounter = document.getElementById("image-counter");
+
+      // lager en for-loop som starter å telle på 0, helt til det ikke går mer og imageArray er større enn telleren. Deretter henter jeg inn imageArrayet sin i´ende plass og printer ut bildene (+=) i html. 
+    
+      for (let i = 0; i < imageArray.length; i++) {
+        arrayContainer.innerHTML += imageArray[i];
+      }
+
+      // her står det en oppdatert tekst på hvor mange bilder det finnes i arrayet. 
+      imageCounter.textContent = `Det finnes ${imageArray.length} bilder i arrayet.`;
+    </script>
+  </body>
+</html>

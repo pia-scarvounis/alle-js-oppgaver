@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="fun-fact-txt"></p>
+    <script>
+        // A) lag en tom p-tag - hent inn i JS. 
+        // B) lag en alert med en funfact
+        // C lag en prompt som spør bruker om å skrive sin egen funfact. 
+        // D) skriv ut brukers mld i p-taggen
+
+        const myFunFact = alert("Bokstaven Q var ulovlig i Tyrkia i 85år");
+        const userFunFact = prompt("Skriv inn din funfact:")
+
+        const funFactTxt = document.getElementById("fun-fact-txt");
+        funFactTxt.innerHTML = userFunFact;
+    </script>
+</body>
+</html>

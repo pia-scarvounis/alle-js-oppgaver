@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="money-counter"></p>
+    <div id="money-container"></div>
+    <script>
+      // lag et program som spør brukeren om hvor mange tusenlapper han vil ha. Skriv ut antall tusenlapper i browseren.
+      let moneyCounter = document.getElementById("money-counter");
+
+      const moneyContainer = document.getElementById("money-container");
+      let moneyUser = prompt("hvor mange tusenlapper vil du ha?");
+      moneyUser = parseInt(moneyUser, 10); // Konverterer streng til tall med parseInt
+
+      function printMoney() {
+        for (let i = 0; i < moneyUser; i++) {
+          moneyContainer.innerHTML += `<img src="/assets/1000.jpeg">`;
+        }
+        moneyCounter.innerHTML = `DU HAR FÅTT ${moneyUser} TUSENLAPPER`;
+      }
+      printMoney();
+    </script>
+  </body>
+</html>

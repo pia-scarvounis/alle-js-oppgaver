@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html-txt">Dette er HTML!</p>
+    <script>
+        // A) lag en p-tag i HTML hvor det står "Dette er HTML!" Hent deretter inn en variabel i JS ved bruk av document.getElementById(""). 
+        // B) lag en variabel i JS hvor det står "overskrevet av Javascript!" Print dette ut til p-taggen ved bruk av innerHTML. 
+
+        const htmlTxt = document.getElementById("html-txt");
+        const newTxt = "overskrevet av Javascript!";
+        htmlTxt.innerHTML = newTxt;
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="plus-btn">pluss +</button>
+    <button id="minus-btn">minus -</button>
+    <ul id="price-list"></ul>
+    <div id="current-count">Antall klikk: 0</div>
+    <script>
+              // lag et program som inneholder to knapper. en pluss og en minus knapp.
+
+              //legg inn regler for hvilke premier bruker skl motta når han trykker x antall ganger. bruker skal få premie for -5, 5 10 og 20
+
+              // onclick, funtion, counter, if/else, ul, counter, innherHTML, +-, li
+        
+        const plusBtn = document.getElementById("plus-btn");
+        const minusBtn = document.getElementById("minus-btn");
+        let priceList = document.getElementById("price-list");
+        let currentCount = document.getElementById("current-count"); 
+        let counter = 0;
+
+        function updatePrizes() {
+            currentCount.innerText = `Antall klikk: ${counter}`;
+            // Sjekk betingelser og oppdater prislisten. I tilfellet med currentCount, er formålet kun å vise en oppdatert tekststreng som representerer antall klikk. Det er ingen grunn til å bruke HTML-tagger for dette enkle tekstinnholdet, så innerText er det tryggeste og mest direkte valget. Det sikrer at innholdet behandles som ren tekst og ikke som HTML, noe som gir bedre ytelse og sikkerhet ved oppdatering av elementet.
+            if (counter === -5) {
+                priceList.innerHTML += "<li>Du har vunnet en bil!</li>";
+            } else if (counter === 5) {
+                priceList.innerHTML += "<li>Du har vunnet en sjokolade</li>";
+            } else if (counter === 10) {
+                priceList.innerHTML += "<li>Du har vunnet et gavekort på McDonalds</li>";
+            } else if (counter === 20) {
+                priceList.innerHTML += "<li>Du har vunnet en reise</li>";
+            }
+        }
+
+        minusBtn.onclick = function() {
+            counter--;
+            updatePrizes();
+        };
+
+        plusBtn.onclick = function() {
+            counter++;
+            updatePrizes();
+        };
+    </script>
+  </body>
+</html>

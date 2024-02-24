@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="puppy-btn">Trykk her</button>
+<div id="puppy-container"></div>
+<p id="puppy-amount"></p>
+
+    <script>
+        // lag en knapp. hver gang bruker trykker på knappen, skal det dukke opp et bilde av en valp. Lag en p-tag hvor det står hvor mange valper som er på skjermen.
+
+        // button, onclick, function, div, +=, counter++ 
+
+        const puppyBtn = document.getElementById("puppy-btn");
+        const puppyAmount = document.getElementById("puppy-amount");
+        const puppyContainer = document.getElementById("puppy-container");
+        let puppyCounter = 0;
+
+        puppyBtn.onclick = function() {
+            puppyCounter++;
+            puppyAmount.textContent = `Antall valper på skjermen: ${puppyCounter}`;
+            puppyContainer.innerHTML += `<img src="/assets/puppy.jpeg"/>`;
+            
+        }
+        
+    </script>
+</body>
+</html>

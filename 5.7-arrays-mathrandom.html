@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trykk på spåkulen, se din fremtid:</h1>
+    <button id="fortune-teller-imgbtn"><img src="/assets/fortune-teller.jpg" style="width: 500px;"></button>
+    <p id="user-fortune-txt"></p>
+
+    <script>
+        const fortuneTellerImgBtn = document.getElementById("fortune-teller-imgbtn");
+        const userFortuneTxt = document.getElementById("user-fortune-txt");
+        const fortunes = [
+            "I den kommende perioden vil du oppleve en betydelig personlig vekst. Hindringer som tidligere virket uoverkommelige vil gradvis begynne å føles håndterbare. Denne nye styrken og innsikten du oppnår, vil lede deg til nye og spennende muligheter, både personlig og profesjonelt. Husk å omfavne forandring, for det er her du vil finne dine største triumfer.",
+            "Snart vil du oppdage en dypere følelse av lykke og harmoni i ditt daglige liv. Små gleder blir mer fremtredende, og du vil finne tilfredshet i øyeblikkene som tidligere ble oversett. Vennskap og familieforhold vil blomstre, og du vil føle deg mer tilknyttet dem du bryr deg om. Ta vare på disse øyeblikkene, for de vil være kilden til varig lykke og fred.",
+            "En tid med store prestasjoner og suksess ligger foran deg. Arbeidet og innsatsen du har lagt ned vil begynne å bære frukter. Du vil oppnå anerkjennelse i din valgte karriere eller virksomhet, og dine kreative anstrengelser vil bli møtt med beundring og respekt. Husk å nyte reisen like mye som destinasjonen, og ikke glem å feire dine triumfer sammen med de som har støttet deg underveis."
+        ];
+
+        fortuneTellerImgBtn.onclick = function() {
+            const userName = prompt("Skriv inn ditt navn");
+            if (!userName.trim()) {
+                alert("Du må skrive inn navnet ditt for å motta en spådom.");
+            } else {
+                const randomIndex = Math.floor(Math.random() * fortunes.length);
+                userFortuneTxt.innerHTML = `${userName}, ${fortunes[randomIndex]}`;
+            }
+        };
+    </script>
+</body>
+</html>

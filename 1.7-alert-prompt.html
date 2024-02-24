@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.7-css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="visittkort">
+<p id="user-name">Navn:</p>
+<p id="user-age">Alder:</p>
+<p id="user-address">Bosted:</p>
+    </div>
+    <script>
+        // lage et program som lager skreddrsydde visittkort. Skriv ut en infomelding om hvordan brukeren skal bruke programmet. 1) Spør bruker om alder og bosted. 2) Skriv ut informasjonen gitt i et visittkort. Style kortet slik du ønsker. 3) I konsollen skal du skrive en melding til andre utviklere som leser i konsollen. 
+
+        const infoMessage = alert("Lag ditt eget kredittkort, følg de neste stegene så er kortet klart innen få minutter");
+
+        const userNameInput = prompt("Skriv inn ditt navn");
+        const userAgeInput = prompt("Skriv inn din alder");
+        const userAddressInput = prompt ("Skriv inn din adresse"); 
+
+userName = document.getElementById("user-name");
+userAge = document.getElementById("user-age");
+userAddress = document.getElementById("user-address");
+
+userName.innerHTML += userNameInput;
+userAge.innerHTML += userAgeInput;
+userAddress.innerHTML += userAddressInput; 
+
+console.log("EN MELDING TIL ALLE DERE NØRDER SOM LESER CONSOLE.LOGGER!!");
+    </script>
+</body>
+</html>

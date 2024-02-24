@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="user-input" placeholder="Skriv inn din vare" />
+    <input type="button" id="add-btn" value="Add" />
+    <div id="item-list"></div>
+
+    <script>
+      const items = [];
+      const addButton = document.getElementById("add-btn");
+      const inputField = document.getElementById("user-input");
+      const itemList = document.getElementById("item-list");
+
+// add funksjon:
+      const addItem = () => {
+        const itemName = inputField.value;
+        if (itemName) {
+          items.push(itemName); 
+          displayItems(); 
+          inputField.value = ""; 
+        }
+      };
+
+// display-funksjon:
+      const displayItems = () => {
+        itemList.innerHTML = "";
+        items.forEach((item, index) => {
+          const itemElement = document.createElement("div");
+          itemElement.textContent = item;
+
+ // delete-ikon:
+          const deleteIcon = document.createElement("img");
+          deleteIcon.src = `/assets/delete-icon.png`;
+          deleteIcon.style.width = "15px";
+          deleteIcon.style.height = "15px";
+          deleteIcon.addEventListener("click", () => deleteItem(index));
+
+          itemElement.appendChild(deleteIcon);
+          itemList.appendChild(itemElement);
+        });
+      };
+
+// delete-funkskjon:
+      const deleteItem = (index) => {
+        const confirmDelete = prompt(
+          "Er du sikker på at du vil slette denne varen? Skriv 'ja' for å bekrefte."
+        );
+        if (confirmDelete.toLowerCase() === "ja") {
+          items.splice(index, 1);
+          displayItems();
+        }
+      };
+
+ addButton.addEventListener("click", addItem);
+    </script>
+  </body>
+</html>

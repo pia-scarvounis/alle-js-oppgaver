@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Trykk her</button>
+    <script>
+
+        // lag en knapp der det står trykk her. Når man trykker på knappen skal den bli grønn. tekstfonten skal bli større og teksten skal endres til "jeg ble trykket på"
+
+        // skal bruke createElement, .style og eventListener. 
+
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function() {
+            // Direkte endre egenskapene til knappen ved klikk
+            this.style.backgroundColor = "green";
+            this.style.fontSize = "20px"; 
+            this.textContent = "Jeg ble trykket på";  
+        });
+    </script>
+</body>
+</html>
+
+
+      

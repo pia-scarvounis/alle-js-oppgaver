@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="user-color-answer"></p>
+    <script>
+      // A: lag en p-tag i HTML-dok ditt. Den kan være tom.
+      // B: lag en prompt som spør brukeren om deres favorittfarge.
+      // C: Skriv ut favorittfargen til p-taggen fra oppgave A. Det skal nå stå: "Min favorittfarge er *brukerens farge*"
+
+      const userColorQuestion = prompt("Hva er din favorittfarge?");
+
+      const userColorAnswer = document.getElementById("user-color-answer");
+      userColorAnswer.innerHTML = userColorQuestion;
+    </script>
+  </body>
+</html>

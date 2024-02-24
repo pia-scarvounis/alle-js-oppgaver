@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mat-lister</h1>
+    <p id="like-food-count">Matretter jeg liker...: 0</p>
+    <button id="add-like-food">legg til</button>
+    <ul id="like-food-list"></ul>
+
+    <p id="dislike-food-count">Matretter jeg ikke liker...: 0</p>
+    <button id="add-dislike-food">legg til</button>
+    <ul id="dislike-food-list"></ul>
+
+    <script>
+      // lag et program som lar bruker liste ut mat de liker og ikke liker. Gi bruker tilbakemld om hvor mange retter de har listet ut i hver kategori.
+
+      // teller
+      let likeFoodCount = document.getElementById("like-food-count");
+      let dislikeFoodCount = document.getElementById("dislike-food-count");
+      let likeCounter = 1;
+      let dislikeCounter = 1;
+
+      // lister
+      let likeFoodList = document.getElementById("like-food-list");
+      let dislikeFoodList = document.getElementById("dislike-food-list");
+
+      // knapper
+      const addLikeFood = document.getElementById("add-like-food");
+      const addDislikeFood = document.getElementById("add-dislike-food");
+
+      // funksjoner
+
+      //antall-funksjon
+      function updateLikeList() {
+        likeFoodCount.innerHTML = `Antall matretter jeg liker: ${likeCounter}`;
+        likeCounter++;
+      }
+      //like-liste-funksjon
+      addLikeFood.onclick = function () {
+        let foodItem = prompt("Skriv inn en matrett du liker");
+        likeFoodList.innerHTML += `<li>${foodItem}</li>`;
+        updateLikeList();
+      };
+      // antall-funksjon
+      function updateDislikeList() {
+        dislikeFoodCount.innerHTML = `Antall matretter jeg ikke liker: ${dislikeCounter}`;
+        dislikeCounter++;
+      }
+      //dislike-liste-funksjon
+      addDislikeFood.onclick = function () {
+        let DislikefoodItem = prompt("Skriv inn en matrett du ikke liker");
+        dislikeFoodList.innerHTML += `<li>${DislikefoodItem}</li>`;
+        updateDislikeList();
+      };
+    </script>
+  </body>
+</html>

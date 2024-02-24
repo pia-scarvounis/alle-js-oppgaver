@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+  // lage et program som fungerer som en minibank.
+
+      // A) Lage en variabel m hemmelig passord & hvor mye penger bruker har på konto.
+      // B) bruker skal få spm om det hemmelige passordet. Er passordet riktig får brukeren opp en oversikt over hvor mye penger hun har på konto i en alert.
+      // C) bruker får deretter spm om han ønsker å ta ut penger. Hvis ja - hvor mye ønsker bruker å ta ut.
+      // D Deretter: gi bruker tilbakemld om hvor mye som er resterende på konto etter uttaket. Pass på at brukeren ikke får ta ut mer enn han har. Da skal han få opp en feilmelding i alert.
+     
+      const correctPassword = "popcornmonster";
+      let moneyInAccount = 1789;
+
+      const userLoginAnswer = prompt("Skriv inn passordet ditt for å logge inn i nettbanken");
+
+if (userLoginAnswer == correctPassword) {
+    alert(`Velkommen! Du har ${moneyInAccount} kr på konto`);
+    const userTakeOutQuestion = prompt("ønsker du å ta ut penger?"); 
+if (userTakeOutQuestion.toLowerCase() == "ja") {
+const userOuttakeAmount = prompt("Hvor mye ønsker du å ta ut?");
+if (userOuttakeAmount.parseInt() > moneyInAccount.parseInt()) {
+    alert("Du har ikke nok penger på konto")
+} else {
+    const currentMoney = parseInt(moneyInAccount) - parseint(userOuttakeAmount)
+    alert(`Den er grei. Du har ${currentMoney}kr igjen på konto`)
+}}}
+
+    </script>
+</body>
+</html>

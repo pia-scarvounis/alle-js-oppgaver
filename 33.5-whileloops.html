@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sheep-count-show"></div>
+    <div id="sheep-container"></div>
+
+    <script>
+      // lag et program som hjelper bruker med å sove v å telle sauer. Bruker skal få et spm: "Vil du fortsette å telle sauer? Ja/nei" antall sauer: 0. Hvis bruker svarer ja, skal spm gjentas og antall sauer øke. Deretter skal det listes ut antall bilder av sauer som brukeren svarte ja. Hvis bruker svarer noe annet en ja skal han få mulighet til å fortsette å telle der han slapp.
+
+      let sheepCountShow = document.getElementById("sheep-count-show");
+      let sheepContainer = document.getElementById("sheep-container");
+      let sheepCounter = 0;
+      let keepCounting = true;
+
+      while (keepCounting) {
+        let userAnswer = prompt("Vil du fortsette å telle sauer? (ja/nei) Antall sauer:" + sheepCounter);
+        if (userAnswer.toLowerCase() === "ja") {
+          sheepCounter++;
+        sheepCountShow.textContent = "Antall sauer:" + sheepCounter;
+        sheepContainer.innerHTML += `<img src="/assets/sheep.jpeg">`;
+      } else {
+        keepCounting = false;
+        alert("Sov godt - Hadet bra!");
+      }}
+
+      // bruker får hadet-bra melding når de skriver noe annet enn ja/nei. Finn ut av det. 
+    </script>
+  </body>
+</html>

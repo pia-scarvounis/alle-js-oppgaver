@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="number-btn">Trykk for random tall</button>
+    <p id="random-number-container"></p>
+    <script>
+        // lag en knapp og en p-tag. Hver gang bruker trykker på knappen skal det dukke opp et random tall i p-taggen mellom 1 og 70. 
+
+        // hint: onclick, function, innerHTML, Math.random 
+
+        const numberBtn = document.getElementById("number-btn");
+        let randomNumberContainer = document.getElementById("random-number-container");
+
+        numberBtn.onclick = function() {
+            let randomNumber = Math.floor(Math.random() * 70) +1; // +1 så ikke random nr blir 0. 
+            randomNumberContainer.innerHTML = randomNumber;
+        }
+        
+    </script>
+</body>
+</html>

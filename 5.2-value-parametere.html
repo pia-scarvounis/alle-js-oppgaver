@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="movie-info-container"></p>
+    <input type="text" id="movie-name" placeholder="Filmnavn" />
+    <input type="number" id="movie-year" placeholder="Utgivelsesår" />
+    <button id="add-btn">Ferdig</button>
+    <script>
+      // lag en tom p-tag. lag to inputfelt der bruker skal skrive navnet på en film og året den kom ut.
+
+      // Her skal du ha to funksjoner. En som samler informasjon bruker har skrevet inn, og en annen som skal vise frem informasjonen.
+
+      // Må bruke parametere for å sende informasjonen videre. Når bruker trykker på ferdig-knappen skal informasjonen samles og deretter vises/skrives ut i p-taggen slik: "filmen x kom ut i år x"
+
+      // hint: button, onclick/function, parametere, .value, innerHTML.
+      const movieNameInput = document.getElementById("movie-name");
+      const movieYearInput = document.getElementById("movie-year");
+      const addBtn = document.getElementById("add-btn");
+      let movieInfoContainer = document.getElementById("movie-info-container");
+
+      function collectMovieInfo() {
+        const nameTxtValue = movieNameInput.value;
+        const movieYearValue = movieYearInput.value;
+        showMovieInfo(nameTxtValue, movieYearValue);
+      }
+
+      function showMovieInfo(nameTxtValue, movieYearValue) {
+        movieInfoContainer.innerHTML = `filmen ${nameTxtValue} kom ut i år ${movieYearValue}`;
+      }
+      addBtn.onclick = collectMovieInfo;
+    </script>
+  </body>
+</html>

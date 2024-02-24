@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Lag en variabel med et tall. Spør deretter brukeren om å gjette tallet. Med if/else skal du gi beskjed om tallet er riktig, for lavt el høyt. 
+
+        const secretNumber = 4;
+        const userGuess = prompt("Gjett et tall mellom 1-10");
+
+        if (secretNumber < userGuess) {
+            alert("Tallet du gjettet er for høyt");
+        } else if (secretNumber > userGuess){
+            alert("Tallet du gjettet er for lavt");
+        } else {
+            alert("Du har gjettet riktig nummer, 4!");
+        }
+        
+           
+    </script>
+</body>
+</html>

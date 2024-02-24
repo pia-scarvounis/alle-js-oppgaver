@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // slett plass nr 3 i arrayet. console.log det slettede arrayet og det nye arrayet etter sletting
+    const movieArray = [
+        {
+          name: "Up",
+          genre: "Animert komedie-drama",
+          year: 2009,
+        },
+        {
+          name: "Titanic",
+          genre: "romantikk-eventyr",
+          year: 1997,
+        },
+        {
+          name: "8 Mile",
+          genre: "drama",
+          year: 2002,
+        },
+        {
+          name: "Barbie",
+          genre: "fantasi-komedie",
+          year: 2023,
+        },
+        {
+          name: "Mean Girls",
+          genre: "komedie",
+          year: 2004,
+        },
+      ];
+
+     const removedMovies = movieArray.splice(2,1);
+
+      // Logg det slettede elementet (lage en ny const "removedMovies" deretter console.logge:)
+    console.log("Slettet film:", removedMovies[0]);
+
+// Logg det nye arrayet etter sletting
+console.log("Nytt array etter sletting:", movieArray);
+    </script>
+</body>
+</html>

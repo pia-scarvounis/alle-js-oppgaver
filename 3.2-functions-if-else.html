@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="start-btn">START</button>
+    <script>
+      // lag en start knapp. når bruker trykker på kanppen skal han taste inn et hemmelig passord. bruker skal få tilbakemld om passrod er riktig el galt.
+
+      
+        const startBtn = document.getElementById("start-btn");
+        const correctPassword = "heihei";
+    
+      
+      startBtn.onclick = function(){
+        const userPassword = prompt("Skriv inn passord");
+        if (userPassword == correctPassword) {
+          alert("du har skrevet riktig");
+        } else {
+          alert("Du har skrevet feil passord");
+        }
+      }
+    </script>
+  </body>
+</html>

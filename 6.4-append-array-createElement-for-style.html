@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="pakkeliste"></ul>
+    <script>
+      // pakkeliste: du skal legge 5 objekter du må ha med deg på tur inn i et array. Objektet skal inneholde "name" og "status" for om de er pakket el ikke.
+
+      // skriv ut alle objektene til en liste. Hvis objektet er pakket skal de få grønn bakgrunn, hvis ikke skal de ha gul bakgrunn.
+
+      // array, for, create element, .style, append/append child
+
+    
+      const packlistArray = [
+  {
+    name: "Snus",
+    status: true,
+  },
+  {
+    name: "iPhone",
+    status: false,
+  },
+  {
+    name: "drikkeflaske",
+    status: true,
+  },
+  {
+    name: "sov-i-ro ørepropper",
+    status: false,
+  },
+  {
+    name: "Macbook",
+    status: false,
+  },
+];
+
+// Gå gjennom listen med en for-loop
+for (let i = 0; i < packlistArray.length; i++) {
+  let li = document.createElement("li");
+  li.textContent = packlistArray[i].name;
+
+  // Sjekk status og sett bakgrunnsfarge
+  if (packlistArray[i].status) {
+    li.style.backgroundColor = "green"; // Pakket
+  } else {
+    li.style.backgroundColor = "yellow"; // Ikke pakket
+  }
+
+  // Legg til <li> i <ul>
+  document.getElementById('pakkeliste').appendChild(li);
+}
+
+
+    </script>
+  </body>
+</html>
